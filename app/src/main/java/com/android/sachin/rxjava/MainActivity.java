@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,15 +23,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         b1 = (Button) findViewById(R.id.btn1);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             /*   new Loader1().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-                new Loader2().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-                new Loader3().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);*/
-               new Loader2().performOperation2();
+               new Loader1().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                //new Loader2().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                //new Loader3().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+               //new Loader2().performOperation2();
             }
         });
 /*

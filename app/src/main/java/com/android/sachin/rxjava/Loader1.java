@@ -3,6 +3,8 @@ package com.android.sachin.rxjava;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import com.google.firebase.perf.metrics.AddTrace;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
@@ -18,6 +20,7 @@ public class Loader1 extends AsyncTask<Void,Void,Void> {
 
     public static String json="";
     @Override
+    @AddTrace(name="AsyncTask",enabled = true)
     protected Void doInBackground(Void... params) {
 
         getJson();
